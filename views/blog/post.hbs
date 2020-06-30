@@ -1,0 +1,57 @@
+{{!-- Отображение элементов --}}
+<div class="columns mt-4">
+  <div class="column ">
+    <h2 class="title is-3">Просмотр постов</h2>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Component
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+          <br>
+        </div>
+      </div>
+      <div class="content ml-4">
+        <span class="tag is-link is-light">Link</span>
+        <br>
+      </div>
+
+
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">Редактировать</a>
+        <a href="#" class="card-footer-item">Удалить</a>
+      </footer>
+    </div>
+  </div>
+  {{!-- Добавление элементов --}}
+  <div class="column add-post">
+    <h2 class="title is-3">Новый пост</h2>
+    <div class="select mb-4">
+      <select>
+        {{#each category}}
+        <option>{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input add-title" type="text" placeholder="Тема">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Body</label>
+      <div class="control">
+        <textarea class="textarea add-text" placeholder="Текст"></textarea>
+      </div>
+      <div class="control mt-2">
+        <button class="button is-link add-post-btn">Отправить</button>
+      </div>
+    </div>
+
+  </div>
+</div>

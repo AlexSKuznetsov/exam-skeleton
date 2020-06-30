@@ -1,0 +1,59 @@
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      <a class="navbar-item " href="/">
+        <span class="icon navbar-item mr-2 has-text-white">
+          <i class="fas fa-home"></i>
+        </span>
+        Домой
+      </a>
+      <a class="navbar-item" href="/category">
+        <span class="icon navbar-item mr-2 has-text-white">
+          <i class="fas fa-filter"></i>
+        </span>
+        Категории
+      </a>
+      <a class="navbar-item " href="/post">
+        <span class="icon navbar-item mr-2 has-text-white">
+          <i class="fas fa-book"></i>
+        </span>
+        Посты
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          {{#if user}}
+          <a class="navbar-item mx-2 has-text-white" href="/dashboard">
+            <span class="icon navbar-item mr-2 has-text-white">
+              <i class="fas fa-user-cog"></i>
+            </span>
+            Дашборд
+          </a>
+          <span class="icon is-small is-right mr-2">
+            <i class="fas fa-user-circle"></i>
+          </span>
+          <strong class="mr-4">{{user.login}}</strong>
+          <a class="button is-light" href="/logout/{{user._id}}">
+            Выйти
+          </a>
+          {{else}}
+          <a class="button is-primary" href="register">
+            <strong>Регистрация</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Логин
+          </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

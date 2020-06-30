@@ -1,0 +1,52 @@
+<nav class="level mt-4">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Пользователей</p>
+      <p class="title">{{userCount}}</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Категории</p>
+      <p class="title">123</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Посты</p>
+      <p class="title">456K</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Лайки</p>
+      <p class="title">789</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container dashboard mt-4">
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <span class="icon is-small is-right mr-2">
+          <i class="fas fa-user"></i>
+        </span>
+        Пользователь: {{user.login}}
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        id: {{user._id}}
+        <br>
+        login: {{user.login}}
+        <br>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="#" class="card-footer-item">Save</a>
+      <a href="#" class="card-footer-item">Edit</a>
+      <a href="#" class="card-footer-item">Delete</a>
+    </footer>
+  </div>
+</div>

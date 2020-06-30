@@ -1,0 +1,7 @@
+<div class="mt-4">
+  {{#if user}}
+  <h1>Привет {{user.login}}</h1>
+  {{else}}
+  <h1>Пожалуйста <a href="/login">войдите</a> в систему или <a href="/register">зарегистрируйтесь</a></h1>
+  {{/if}}
+</div>
